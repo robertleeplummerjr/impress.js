@@ -93,6 +93,11 @@
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+      #impress div p {
+        font-size: 20px;
+      }
+    </style>
 </head>
 
 <!--
@@ -163,8 +168,8 @@
         It will not be rotated or scaled.
         
     -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
+    <div id="inspire" class="step" data-x="-2400" data-y="-1500">
+        <q>What <strong>inspires</strong> you?</q>
     </div>
 
     <!--
@@ -182,12 +187,60 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+    <div class="step slide" data-x="-1200" data-y="-1500" data-rotate="180">
+        <q>
+          <img src="dino.jpg" style="width: 50%; margin-top: -100px; margin-left: -60px; position: absolute;">
+          <div style="text-align: right; margin-right: -30px;">
+            <h1>Dinosaurs Inspire</h1>
+          </div>
+        </q>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    <div class="step slide" data-x="0" data-y="-1500">
+      <q>
+        <div style="text-align: right;">
+          <h1>Functional Programming inspires</h1>
+          <p>
+            "tough to say exactly... I think it just makes sense to me to have your code written as a collection of state transformations
+            no data mutation, no side effects... you can tell exactly what's going on" - Tom Williams
+          </p>
+        </div>
+        <img src="tom.jpg" style="width: 55%; position: absolute; margin-left: -55px; margin-top: -65px;">
+      </q>
+    </div>
+
+    <div class="step slide" data-x="1200" data-y="-1500" style="background-image: url('michelle.jpg'); background-position: center; color: white;">
+      <q>
+        <div style="text-align: right;">
+          <h1>Gifs inspire</h1>
+          <p>
+            "honestly,.. it's the searching for them.... and the randomness that shows up. sometimes it's hysterical.. other times i struggle to find something good :smile:" - Michelle Bowser
+          </p>
+        </div>
+      </q>
+    </div>
+
+    <div class="step slide" data-x="1200" data-y="-2500">
+      <q style="position: absolute; margin-left: -30px; margin-top: -30px;">
+        <img src="little-slide.gif" width="200">
+        <img src="cat-backwards.gif" width="200">
+        <img src="gallery_1424496209-ben.gif" width="200">
+        <img src="giphy%20(1).gif" width="200">
+        <img src="giphy%20(3).gif" width="200">
+        <img src="wash-car.gif" width="200">
+        <img src="WblL4.gif" width="200">
+        <img src="papers.gif" width="200">
+        <img src="cat-cd.gif" width="200">
+        <img src="confused.gif" width="200">
+        <img src="bow.gif" width="200">
+        <img src="all-the-gifs.png" width="200">
+      </q>
+    </div>
+
+    <div class="step slide" data-x="2400" data-y="-1500" style="background-image: url('me.jpg'); background-position: center; background-size: 100%;">
+        <q>
+          "I'm inspired by you" - me
+        </q>
     </div>
 
     <!--
@@ -200,10 +253,13 @@
         down (4 times) to make it back to its correct size.
         
     -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+    <div id="title" class="step" data-x="0" data-y="300" data-scale="3">
+        <q>
+          Inspiration and enthusiasm are hard to find.
+          But more often, they are hard to have.
+          01100101 01110011 01110000 01100101 01100011 01101001 01100001 01101100 01101100 01111001 00100000 01110111 01101000 01100101 01101110 00100000 01101001 01101110 00100000 01110100 01101000 01100101 00100000 01110100 01110010 01100101 01101110 01100011 01101000
+          <p>(especially when in the trench)</p>
+        </q>
     </div>
 
     <!--
@@ -214,14 +270,19 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It’s a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    <div id="why" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
+        <q>
+          Why?
+        </q>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
+        <ul style="text-align: left">
+          <li>to Settle is easy.</li>
+          <li>to Fail is easy.</li>
+          <li>to Reject is easy.</li>
+          <li>to Give up is easy.</li>
+        </ul>
     </div>
 
     <!--
@@ -233,8 +294,10 @@
         positioned far away from us (by 3000px).
         
     -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="0.5">
+        <q>
+          that is ok
+        </q>
     </div>
 
     <!--
@@ -257,21 +320,97 @@
         Only one current step has the `present` class.
         
     -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    <div id="compromise" class="step" data-x="5500" data-y="-5500" data-rotate="300" data-scale=".01">
+        <p>
+          <b class="positioning">"Don't compromise."</b> - Steve Jobs
+        </p>
     </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    <div id="pressure" class="step" data-x="5500" data-y="-5400" data-rotate="300" data-scale=".1">
+        <p>
+          <b>"No pressure, no diamonds."</b> - Thomas Carlyle
+        </p>
     </div>
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    <div id="" class="step" data-x="5500" data-y="-5300" data-rotate="300" data-scale="1">
+      <p>
+        <b>"There is always a way, even if there isn't"</b> - me
+      </p>
+    </div>
+
+    <div id="traveling-salesman" class="step" data-x="-1500" data-y="5000" data-rotate="20" data-scale="4">
+        <p>The traveling salesman.</p>
+        <q><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bruteforce.gif"></q>
+    </div>
+
+    <div id="ant" class="step" data-x="-3500" data-y="1000" data-rotate="95" data-scale="4">
+      <div style="margin-left: -100px;">
+        <p>"The ant." -  Marco Dorigo 1993</p>
+        <q>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Aco_TSP.svg/1200px-Aco_TSP.svg.png" style="width: 800px;">
+          <img src="AntColony.gif" />
+        </q>
+      </div>
+    </div>
+
+    <div id="bees" class="step" data-x="-3500" data-y="1000" data-rotate="95" data-scale=".2">
+      <p>bees do the same thing.... on three dimensions</p>
+    </div>
+
+    <div id="edison" class="step" data-x="2000" data-y="3000" data-rotate="20" data-scale="1">
+      <p>Edison's subdivide of light.</p>
+    </div>
+
+    <div id="preece" class="step" data-x="2000" data-y="4000" data-rotate="20" data-scale="1" style="background-image: url('edison.jpg'); background-position: center; background-size: cover; color: yellow;">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        "Edison's system  has been worked out in detail, with a thoroughness and mastery of the subject that can extract nothing but eulogy from his bitterest opponents
+        ... Many unkind things have been said of Mr. Edison and his promises; perhaps no one has been severer in this direction than myself.
+        It is some gratification for me to be able to announce my  belief  that he has at last solved the problem he set himself to solve." - William Preece
+      </p>
+    </div>
+
+    <div id="led" class="step" data-x="2000" data-y="4000" data-rotate="20" data-scale="0.001">
+      <p>
+        Then there was the light emitting diode.
+        <img src="http://www.imagesco.com/articles/photovoltaic/ledW.jpg">
+      </p>
+    </div>
+
+    <div id="ignaz" class="step" data-x="4000" data-y="4000" data-rotate="20" data-scale="1">
+      <img src="ignaz.jpg" style="width: 50%; float: left;">
+      <p>
+        <br />
+        <br />
+        <br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        &nbsp;&nbsp;&nbsp;"Wash your hands" - Ignaz Semmelweis
+      </p>
+    </div>
+
+    <div id="hhtf" class="step" data-x="4000" data-y="4000" data-rotate="20" data-scale="0.01">
+      <p>
+        <img src="ignaz-statue.jpg"/><br />
+        Washing your hands is standard procedure -
+        <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/rr5116a1.htm">HICPAC/SHEA/APIC/IDSA Hand Hygiene Task Force</a>
+      </p>
     </div>
 
     <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+        <p>
+          <img src="http://www.domyownpestcontrol.com/images/content/ant.jpg" width="400">
+          <img src="data:image/jpeg;base64,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">
+          <img src="https://media.victorystore.com/media/catalog/product/cache/1/image/700x700/9df78eab33525d08d6e5fb8d27136e95/p/l/please-wash-your-hands-stock-aluminum-sign-18x24.jpg">
+        </p>
     </div>
 
     <!--
@@ -286,9 +425,17 @@
         as `data-rotate` (these two are basically aliases).
         
     -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+    <div id="accomplish-it" class="step" data-x="6200" data-y="4300" data-z="-140" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p>
+          Something is impossible if it has not been accomplished.<br>
+          Accomplish it.
+        </p>
+    </div>
+    <div id="find-it" class="step" data-x="8200" data-y="4300" data-z="-100" data-rotate-x="-80" data-rotate-y="10" data-scale="2">
+        <p>
+          You are the source of your inspiration.<br>
+          Find it.
+        </p>
     </div>
 
     <!--
