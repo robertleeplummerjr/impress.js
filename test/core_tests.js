@@ -37,23 +37,29 @@
     });
 
     QUnit.test( "Attributes", function( assert ) {
-      assert.expect( 9 );
+      assert.expect( 10 );
 
       var actual, expected;
+      var root = document.querySelector( "#impress" );
       var canvas = document.querySelector( "div#impress > div" );
 
       var canvasIsNotAStep = !canvas.classList.contains("step") && canvas.id === "";
       assert.ok( canvasIsNotAStep, "Canvas do not have step element data" );
 
-      actual = canvas.style.transform;
+      actual = canvas.style.webkitTransform || canvas.style.transform;
       expected = "rotateZ(0deg) rotateY(0deg) rotateX(0deg) translate3d(1000px, 0px, 0px)";
       assert.strictEqual( actual, expected, "canvas.style.transform initialized correctly" );
 
-      actual = canvas.style.transformOrigin;
+      // Normalize result for IE 11 and Safari.
+      actual = canvas.style.webkitTransformOrigin || canvas.style.transformOrigin;
       expected = "left top 0px";
+
+      if ( actual === "left top" || actual === "0% 0%" ) {
+        actual = expected;
+      }
       assert.strictEqual( actual, expected, "canvas.style.transformOrigin initialized correctly" );
 
-      actual = canvas.style.transformStyle;
+      actual = canvas.style.webkitTransformStyle || canvas.style.transformStyle;
       expected = "preserve-3d";
       assert.strictEqual( actual, expected, "canvas.style.transformStyle initialized correctly" );
 
@@ -72,6 +78,10 @@
       actual = canvas.style.transitionTimingFunction;
       expected = "ease-in-out";
       assert.strictEqual( actual, expected, "canvas.style.transitionTimingFunction initialized correctly" );
+
+      actual = root.style.perspective;
+      expected = "";
+      assert.notStrictEqual( actual, expected, "root.style.perspective should be set explicitly for IE 11" );
 
       actual = document.documentElement.style.height;
       expected = "100%";
